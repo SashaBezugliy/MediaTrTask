@@ -7,11 +7,11 @@ namespace SF.API.Infrastructure.Users
 {
     public class CommandHandler : RequestHandler<Command>
     {
-        private UserManager<IdentityUser> _userManager;
+        private IUserRepository _repo;
 
-        public CommandHandler(UserManager<IdentityUser> userManager)
+        public CommandHandler(IUserRepository repo)
         {
-            _userManager = userManager;
+            _repo = repo;
         }
 
         protected override void HandleCore(Command message)
@@ -21,7 +21,7 @@ namespace SF.API.Infrastructure.Users
                 UserName = message.UserName
             };
 
-            _userManager.Create(user, message.Password);
+            _repo.RegisterUser(message);
         }
     }
 }

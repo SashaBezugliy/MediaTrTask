@@ -26,12 +26,6 @@ using SF.API.DependencyResolution;
 namespace SF.API {
     public static class StructuremapWebApi {
         public static void Start() {
-			var container = StructuremapMvc.StructureMapDependencyScope.Container;
-
-            var dependencyResolver = new StructureMapWebApiDependencyResolver(container);
-            
-            //GlobalConfiguration.Configuration.Services.Replace(typeof(IHttpControllerActivator), dependencyResolver);
-            GlobalConfiguration.Configuration.DependencyResolver = dependencyResolver;
         }
     }
 }

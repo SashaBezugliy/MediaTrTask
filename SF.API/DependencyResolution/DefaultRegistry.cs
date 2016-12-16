@@ -15,12 +15,10 @@
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
 
-using System.Web.Http.Dispatcher;
 using MediatR;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using SF.API.Infrastructure.Users;
-using StructureMap.Web;
 
 namespace SF.API.DependencyResolution {
     using StructureMap.Configuration.DSL;
@@ -38,6 +36,8 @@ namespace SF.API.DependencyResolution {
                     scan.WithDefaultConventions();
                     scan.AddAllTypesOf(typeof(IRequestHandler<,>));
                 });
+            For<SingleInstanceFactory>().Use<SingleInstanceFactory>(ctx => t => ctx.GetInstance(t));
+            For<MultiInstanceFactory>().Use<MultiInstanceFactory>(ctx => t => ctx.GetAllInstances(t));
             For<IMediator>().Use<Mediator>();
         }
 

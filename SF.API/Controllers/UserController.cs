@@ -1,5 +1,7 @@
 ﻿using System.Web.Http;
 using MediatR;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
 using SF.API.Infrastructure.Users;
 
 namespace SF.API.Controllers
@@ -8,6 +10,7 @@ namespace SF.API.Controllers
     public class UserController : ApiController
     {
         private readonly IMediator _mediator;
+        private UserManager<IdentityUser> _userManager;
 
         public UserController(IMediator mediator)
         {

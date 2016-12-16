@@ -198,6 +198,7 @@
     <Compile Include="App_Start\StructuremapWebApi.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="AuthContext.cs" />
+    <Compile Include="UserRepository.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="DependencyResolution\DefaultRegistry.cs" />
     <Compile Include="DependencyResolution\IoC.cs" />
@@ -209,6 +210,7 @@
     <Compile Include="Infrastructure\Users\CommandHandler.cs" />
     <Compile Include="Infrastructure\Users\Query.cs" />
     <Compile Include="Infrastructure\Users\QueryHandler.cs" />
+    <Compile Include="IUserRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>

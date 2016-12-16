@@ -8,16 +8,18 @@ namespace SF.API.Infrastructure.Users
 {
     public class QueryHandler : IRequestHandler<Query, Command>
     {
-        private UserManager<IdentityUser> _userManager;
+        private IUserRepository _repo;
 
-        public QueryHandler(UserManager<IdentityUser> userManager)
+        public QueryHandler(IUserRepository repo)
         {
-            _userManager = userManager;
+            _repo = repo;
         }
 
         public Command Handle(Query message)
         {
-            IdentityUser user = _userManager.Find(message.UserName, message.Password);
+            IdentityUser user = _repo.FindUser(message.UserName);
+            if (user == null)
+                return null;
 
             return new Command
             {

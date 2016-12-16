@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using System.Web.Http.Dispatcher;
+using SF.API.App_Start;
+using SF.API.DependencyResolution;
 
 namespace SF.API
 {
@@ -24,6 +27,10 @@ namespace SF.API
                 routeTemplate: "productlists/{userId}",
                 defaults: new { controller = "Product", action = "GetProductLists"}
             );
+
+            var container = StructuremapMvc.StructureMapDependencyScope.Container;
+            config.DependencyResolver = new StructureMapWebApiDependencyResolver(container);
+            config.Services.Replace(typeof(IHttpControllerActivator), config.DependencyResolver);
         }
     }
 }
