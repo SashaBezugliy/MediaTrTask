@@ -10,7 +10,6 @@ namespace SF.API.Controllers
     public class UserController : ApiController
     {
         private readonly IMediator _mediator;
-        private UserManager<IdentityUser> _userManager;
 
         public UserController(IMediator mediator)
         {
