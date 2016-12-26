@@ -55,7 +55,6 @@ D:\Projects\SimplyFindWebAPI\SF.API\bin\System.Web.Http.WebHost.xml
 D:\Projects\SimplyFindWebAPI\SF.API\obj\Debug\SF.API.csprojResolveAssemblyReference.cache
 D:\Projects\SimplyFindWebAPI\SF.API\obj\Debug\SF.API.dll
 D:\Projects\SimplyFindWebAPI\SF.API\obj\Debug\SF.API.pdb
-D:\Projects\Task\SF.API\obj\Debug\SF.API.csprojResolveAssemblyReference.cache
 D:\Projects\Task\SF.API\obj\Debug\SF.API.dll
 D:\Projects\Task\SF.API\obj\Debug\SF.API.pdb
 D:\Projects\Task\SF.API\bin\roslyn\csc.exe
@@ -133,3 +132,10 @@ D:\Projects\Task\SF.API\bin\System.Web.Razor.xml
 D:\Projects\Task\SF.API\bin\System.Web.WebPages.xml
 D:\Projects\Task\SF.API\bin\System.Web.WebPages.Deployment.xml
 D:\Projects\Task\SF.API\bin\System.Web.WebPages.Razor.xml
+D:\Projects\Task\SF.API\obj\Debug\SF.API.csprojResolveAssemblyReference.cache
+D:\Projects\Task\SF.API\bin\Serilog.dll
+D:\Projects\Task\SF.API\bin\Serilog.Sinks.File.dll
+D:\Projects\Task\SF.API\bin\Serilog.Sinks.RollingFile.dll
+D:\Projects\Task\SF.API\bin\Serilog.xml
+D:\Projects\Task\SF.API\bin\Serilog.Sinks.File.xml
+D:\Projects\Task\SF.API\bin\Serilog.Sinks.RollingFile.xml

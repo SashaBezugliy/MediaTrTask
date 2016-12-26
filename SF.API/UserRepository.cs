@@ -1,6 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNet.Identity.EntityFramework;
+using SF.API.ExceptionHandling;
 using SF.API.Infrastructure.Users;
 
 namespace SF.API
@@ -16,6 +18,8 @@ namespace SF.API
         public List<IdentityUser> RegisterUser(Command command)
         {
             _users.Add(new IdentityUser {UserName = command.UserName});
+
+            Enum.Parse(typeof(ErrorMessages), "InRepository");
 
             return _users;
         }
