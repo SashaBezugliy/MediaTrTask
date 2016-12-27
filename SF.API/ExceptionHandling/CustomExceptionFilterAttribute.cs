@@ -1,9 +1,14 @@
 using System;
+using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
+using System.Text;
+using System.Web.Helpers;
 using System.Web.Http.Filters;
+using Newtonsoft.Json;
 using Serilog;
 using Serilog.Formatting.Json;
+using SF.API.Infrastructure.Users;
 
 namespace SF.API.ExceptionHandling
 {
@@ -13,15 +18,14 @@ namespace SF.API.ExceptionHandling
     [AttributeUsage(AttributeTargets.All)]
     public sealed class CustomExceptionFilterAttribute : ExceptionFilterAttribute
     {
-        private const string _template = "{@dto}{NewLine}{@dto.url}";
-
         static CustomExceptionFilterAttribute()
         {
             Log.Logger = new LoggerConfiguration()
                 .MinimumLevel.Error()
-                .WriteTo.RollingFile(@"D:\Install\log-{Date}.txt", 
-                retainedFileCountLimit: 2,
-                shared: true)
+                .WriteTo.RollingFile(@"D:\Install\log-{Date}.txt",
+                    retainedFileCountLimit: 2,
+                    shared: true,
+                    outputTemplate: "{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level}] {Message}{NewLine}{Exception}")
                 .CreateLogger();
         }
 
@@ -34,7 +38,7 @@ namespace SF.API.ExceptionHandling
             }
 
             var exceptionType = actionExecutedContext.Exception.GetType();
-            if (exceptionType == typeof(InControllerException))
+            if (exceptionType == typeof (InControllerException))
             {
                 actionExecutedContext.Response = new HttpResponseMessage
                 {
@@ -52,18 +56,19 @@ namespace SF.API.ExceptionHandling
                     Content = new StringContent(ErrorMessages.TechnicalIssue.ToString())
                 };
             }
-            var dto =
-                new
-                {
-                    url = actionExecutedContext.Request.RequestUri.AbsoluteUri,
-                    parameters = actionExecutedContext.ActionContext.ActionArguments,
-                    date = DateTime.Now.ToShortDateString(),
-                    stacktrace = actionExecutedContext.Exception.StackTrace
-                };
-            Log.Error("",dto);
-            
+
+            var url = actionExecutedContext.Request.RequestUri.AbsoluteUri;
+            var parameters = actionExecutedContext.ActionContext.ActionArguments["command"] as Command;
+            var stacktrace = actionExecutedContext.Exception.StackTrace;
+
+            Log.Error(Environment.NewLine +
+                      "url : {0}" + Environment.NewLine +
+                      "parameters : {@1}" + Environment.NewLine +
+                      "stacktrace : {2}" + Environment.NewLine,
+                url, parameters, stacktrace);
         }
     }
+
 
     public enum ErrorMessages
     {
