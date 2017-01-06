@@ -11,7 +11,7 @@ namespace SF.API
     {
         private List<IdentityUser> _users = new List<IdentityUser>
         {
-            new IdentityUser {UserName = "Me", Email = "me@com"},
+            new IdentityUser {UserName = "Me", Email = "me@com", PasswordHash = "password"},
             new IdentityUser {UserName = "You", Email = "you@com"}
         }; 
                 
@@ -19,7 +19,7 @@ namespace SF.API
         {
             _users.Add(new IdentityUser {UserName = command.UserName});
 
-            Enum.Parse(typeof(ErrorMessages), "InRepository");
+            //Enum.Parse(typeof(ErrorMessages), "InRepository");
 
             return _users;
         }

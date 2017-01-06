@@ -86,7 +86,6 @@ D:\Projects\Task\SF.API\bin\Microsoft.Owin.Security.dll
 D:\Projects\Task\SF.API\bin\Microsoft.Owin.Security.OAuth.dll
 D:\Projects\Task\SF.API\bin\Newtonsoft.Json.dll
 D:\Projects\Task\SF.API\bin\Owin.dll
-D:\Projects\Task\SF.API\bin\System.Net.Http.Formatting.dll
 D:\Projects\Task\SF.API\bin\System.Web.Cors.dll
 D:\Projects\Task\SF.API\bin\System.Web.Http.dll
 D:\Projects\Task\SF.API\bin\System.Web.Http.Owin.dll
@@ -105,7 +104,6 @@ D:\Projects\Task\SF.API\bin\Microsoft.Owin.Security.Cookies.xml
 D:\Projects\Task\SF.API\bin\Microsoft.Owin.Security.OAuth.xml
 D:\Projects\Task\SF.API\bin\System.Web.Http.Owin.xml
 D:\Projects\Task\SF.API\bin\Newtonsoft.Json.xml
-D:\Projects\Task\SF.API\bin\System.Net.Http.Formatting.xml
 D:\Projects\Task\SF.API\bin\System.Web.Http.xml
 D:\Projects\Task\SF.API\bin\System.Web.Http.WebHost.xml
 D:\Projects\Task\SF.API\bin\MediatR.dll
@@ -139,3 +137,16 @@ D:\Projects\Task\SF.API\bin\Serilog.Sinks.RollingFile.dll
 D:\Projects\Task\SF.API\bin\Serilog.xml
 D:\Projects\Task\SF.API\bin\Serilog.Sinks.File.xml
 D:\Projects\Task\SF.API\bin\Serilog.Sinks.RollingFile.xml
+D:\Projects\Task\SF.API\bin\Microsoft.IdentityModel.Protocol.Extensions.dll
+D:\Projects\Task\SF.API\bin\Microsoft.Owin.Security.Jwt.dll
+D:\Projects\Task\SF.API\bin\System.IdentityModel.Tokens.Jwt.dll
+D:\Projects\Task\SF.API\bin\Microsoft.IdentityModel.Protocol.Extensions.xml
+D:\Projects\Task\SF.API\bin\Microsoft.Owin.Security.Jwt.xml
+D:\Projects\Task\SF.API\bin\System.IdentityModel.Tokens.Jwt.xml
+D:\Projects\Task\SF.API\bin\System.Net.Http.dll
+D:\Projects\Task\SF.API\bin\System.Net.Http.Extensions.dll
+D:\Projects\Task\SF.API\bin\System.Net.Http.Primitives.dll
+D:\Projects\Task\SF.API\bin\System.Net.Http.WebRequest.dll
+D:\Projects\Task\SF.API\bin\System.Net.Http.xml
+D:\Projects\Task\SF.API\bin\System.Net.Http.WebRequest.xml
+D:\Projects\Task\SF.API\bin\System.Net.Http.Formatting.dll
