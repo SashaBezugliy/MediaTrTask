@@ -6,7 +6,7 @@ namespace SF.API
 {
     public interface IUserRepository
     {
-        IdentityUser FindUser(string userName);
+        IdentityUser GetUsers();
         List<IdentityUser> RegisterUser(Command command);
     }
 }

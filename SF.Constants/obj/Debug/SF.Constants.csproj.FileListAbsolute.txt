@@ -1,0 +1,5 @@
+D:\Projects\Task\SF.Constants\bin\Debug\SF.Constants.dll
+D:\Projects\Task\SF.Constants\bin\Debug\SF.Constants.pdb
+D:\Projects\Task\SF.Constants\obj\Debug\SF.Constants.csprojResolveAssemblyReference.cache
+D:\Projects\Task\SF.Constants\obj\Debug\SF.Constants.dll
+D:\Projects\Task\SF.Constants\obj\Debug\SF.Constants.pdb

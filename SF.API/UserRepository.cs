@@ -20,7 +20,7 @@ namespace SF.API
             return _users;
         }
 
-        public IdentityUser FindUser(string userName)
+        public IdentityUser GetUsers()
         {
             IdentityUser user = _users.FirstOrDefault(u => u.UserName == userName);
 

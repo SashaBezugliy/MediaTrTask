@@ -6,6 +6,7 @@ using SF.API.Infrastructure.Users;
 
 namespace SF.API.Controllers
 {
+    [Authorize]
     [RoutePrefix("api/User")]
     public class UserController : ApiController
     {
@@ -18,7 +19,7 @@ namespace SF.API.Controllers
 
 
         [Route("Get")]
-        public IHttpActionResult Get(string userName, string password)
+        public IHttpActionResult Get()
         {
             var model = _mediator.Send(new Query {UserName = userName, Password = password});
 
